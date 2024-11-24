@@ -1,0 +1,118 @@
+/* Styles spécifiques pour la couverture */
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #5D3A29; /* Texte marron */
+}
+
+/* Couleurs des différentes pages */
+.page-home {
+    background-color: #F5F5DC; /* Beige clair */
+}
+
+.page-about {
+    background-color: #FFE4E1; /* Rose clair */
+}
+
+.page-portfolio {
+    background-color: #E0FFFF; /* Bleu clair */
+}
+
+.page-contact {
+    background-color: #FFFACD; /* Jaune pâle */
+}
+
+.page-services {
+    background-color: #D3FFCE; /* Vert clair */
+}
+
+header {
+    background: #8B5A2B; /* Marron clair */
+    color: #FFFFFF; /* Texte blanc */
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* Styles pour les images */
+img {
+    max-width: 100%; /* S'assure que l'image ne dépasse pas la largeur de son conteneur */
+    height: auto; /* Maintient le rapport d'aspect */
+    border-radius: 10px; /* Coins arrondis */
+    display: block; /* S'assure que l'image est un bloc */
+    margin: 20px auto; /* Centre l'image avec un espacement */
+}
+
+/* Styles pour les conteneurs d'images */
+.image-container {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux images de passer à la ligne si nécessaire */
+    justify-content: center; /* Centre les images */
+    gap: 20px; /* Espacement entre les images */
+}
+
+.cover {
+    background-image: url('images/cover.jpg'); /* Remplacez par le chemin de votre image de couverture */
+    background-size: cover; /* Couvre toute la section */
+    background-position: center; /* Centre l'image */
+    height: 300px; /* Ajustez la hauteur selon vos besoins */
+    max-height: 400px; /* Limite la hauteur maximale */
+    overflow: hidden; /* Cache toute partie de l'image qui dépasse */
+}
+
+/* Styles pour le contenu de la couverture */
+.cover-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Texte blanc */
+    text-align: center;
+    height: 100%; /* Occupe toute la hauteur de la section */
+    position: relative; /* Positionner le contenu au-dessus de l'overlay */
+    z-index: 2; /* Placer le contenu au-dessus de l'overlay */
+}
+
+.cover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour améliorer la lisibilité */
+    z-index: 1; /* Placer l'overlay en dessous du contenu */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #8B5A2B; /* Marron clair */
+    color: #FFFFFF; /* Texte blanc */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block; /* Éléments de navigation en colonne sur petits écrans */
+        margin: 10px 0;
+    }
+}
